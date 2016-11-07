@@ -1,0 +1,74 @@
+body
+{
+    background-color: white;
+    font-family: "Arial";
+    color: black;
+}
+
+.jumbotron 
+{
+    color: black;
+    margin-top: 25px;
+    background-color: gray;
+    margin-bottom: 20px;
+}
+
+.jumbotron h1 
+{
+  font-size: 40px;
+}
+
+.heading 
+{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  display:block;
+  margin: 0 auto;
+}
+
+li 
+{
+  list-style-type: none;
+}
+
+.burgerType 
+{
+  font-size: 20px;
+}
+
+.btndevourit 
+{
+    background: green;
+    color: black;
+    padding: 5px;
+    display: inline-block;
+}
+
+#btnnameyourburger 
+{
+  display: block;
+  margin: 0 auto;
+  background: green;
+  color: black;
+  margin-bottom: 10px;
+}
+
+#btndelete 
+{
+  display: block;
+  margin: 0 auto;
+}
+
+ul,li 
+{
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+.allgone 
+{
+  float: right;
+}

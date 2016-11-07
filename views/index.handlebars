@@ -1,0 +1,111 @@
+<div class="container">
+
+<div class="jumbotron text-center">
+
+<h1>Eat-Da-Burger</h1>
+            
+</div>
+
+<div class="row">
+
+<div class="col-md-12 ">
+
+<div class="col-md-4">
+
+<div class="orderedBurgers">
+
+<img src="/assets/img/burger.jpg" alt="burger icon" height="120" width="120"/>
+
+<h2 class="heading">Burgers</h2>
+
+<ul>
+
+{{#each burgers}}
+
+{{#unless this.devoured}}
+
+<li>
+
+<p class="burgerType">{{this.burger_name}}</p>
+
+<form action="burgers/updateOne/{{this.id}}?_method=PUT" method="POST">
+
+<input type="hidden" name="devoured" value="true">
+
+<button class="btndevourit" type="submit">Devour It!</button>
+
+</form>
+ 
+ </li>
+  
+{{/unless}}
+
+{{/each}}
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="col-md-4 text-center">
+
+<div class="input">
+
+<div class="form-group">
+ 
+<form method="POST" action="burgers/insertOne" class="addOne text-center">
+ 
+<textarea id="textArea" type="text" name="burger_name" rows="2" cols="40"></textarea>
+  
+<button id="btnnameyourburger"  type="submit" >Name Your Burger!</button>
+  
+</form>
+    
+</div>
+       
+</div>
+    
+</div>
+
+<div class="col-md-4 text-left">
+
+<div class="eatenBurgers">
+
+<img src="/assets/img/halfeatenburger.jpg" alt="burger icon" height="120" width="120"/>
+
+<h2 class="heading">All Gone!</h2>
+      
+<ul>
+      
+{{#each burgers}}
+       
+{{#if this.devoured}}
+     
+<li>
+    
+<p class="burgerType">{{this.burger_name}}</p>
+
+<form action="burgers/delete/{{this.id}}?_method=DELETE" method="POST">
+
+<button class="btndelete" type="submit">Delete It!</button>
+ 
+</form>
+
+</li>
+    
+{{/if}}
+     
+{{/each}}
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
